@@ -1,9 +1,15 @@
-const reducer = (state = 0, action) => {
-    if(action.type === "add"){
-        return state + action.payload
-    }else if(action.type === "sub"){
-        return state - action.payload
-    }else{
+const initalState = {
+product :[]
+};
+
+const reducer = (state = initalState, action) => {
+    if(action.type === "fatch_product"){
+        return {
+            ...state,
+            count: action.payload
+        }
+    }
+    else{
         return state ;
     }
 }

@@ -1,12 +1,21 @@
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { actionCreators }from "../state/index";
+import ProductCard from "./productCard";
+import "./products.css";
+
 function Add(){
     const dispatch = useDispatch();
     
+    useEffect(()=> {
+        dispatch(actionCreators.addProduct());
+    },[]);
+
     return(
         <>
-        <button onClick={() => {dispatch(actionCreators.addCount(100))}} >+</button>
-        <button onClick={() => {dispatch(actionCreators.subCount(100))}} >-</button>
+            <div className="product-container">
+                <ProductCard />
+            </div>      
         </>
     );
 }

@@ -1,0 +1,11 @@
+.product-container{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    margin-bottom: 20px;
+    border:none;
+}

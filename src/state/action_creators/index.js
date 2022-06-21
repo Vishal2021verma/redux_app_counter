@@ -1,17 +1,12 @@
-export const addCount = (count) => {
-    return (dispatch) => {
+import fakeStore from "../apis/fakeProduct";
+
+export const addProduct = () =>  {
+    return async (dispatch) => {
+        const response = await fakeStore.get("/products");  
         dispatch({
-            type: "add",
-            payload: count
+            type: "fatch_product",
+            payload: response.data
         })
     }
 }
 
-export const subCount = (count) => {
-    return (dispatch) => {
-        dispatch({
-            type:"sub",
-            payload: count
-        })
-    }
-}

@@ -1,14 +1,13 @@
-import './App.css';
-import Add from './component/add_sub';
-import Balance from './component/balance';
+import "./App.css";
+import Add from "./component/add_sub";
+import NavBar from "./component/navBar";
 
 function App() {
   return (
-    <div className="App">
-      <Balance />
+    <>
+      <NavBar />
       <Add />
-    </div>
+    </>
   );
 }
-
 export default App;
